@@ -1,34 +1,29 @@
 # Pancaloka - Platform Digital Kolektif Literasi & Dialektika Ilmiah
 
-![PHP](https://img.shields.com/badge/PHP-7.4%20%7C%208.x-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![MySQL](https://img.shields.com/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Bootstrap](https://img.shields.com/badge/Bootstrap-v5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-![License](https://img.shields.com/badge/License-MIT-green?style=for-the-badge)
-
 **Pancaloka** adalah sebuah platform sistem informasi berbasis web yang dirancang sebagai ruang alternatif digital untuk mengonsolidasikan gerakan literasi, menyebarkan publikasi esai kritis, serta mengelola tata kelola organisasi secara inklusif. Aplikasi ini dibangun menggunakan arsitektur **PHP Native** murni dengan lapisan abstraksi basis data berbasis **PDO (PHP Data Objects)** demi menjamin performa kueri yang optimal serta ketahanan siber yang solid.
 
 Antarmuka dikembangkan dengan mengadopsi prinsip ergonomi membaca (*Cozy Library Experience*) menggunakan perpaduan warna hijau pinus (`#1B4938`), krem kertas kertas (`#FAF6F0`), dan aksen terakota (`#E07A5F`) untuk meminimalisir kelelahan mata pengguna saat membaca konten teks panjang.
 
 ---
 
-## 🚀 Fitur Utama Sistem
+## Fitur Utama Sistem
 
-### 👤 1. Otentikasi & Manajemen Akun
+### 1. Otentikasi & Manajemen Akun
 * **Dual-Identity Sign-In:** Mengizinkan proses masuk (*log-in*) menggunakan kombinasi data `username` maupun alamat `email` secara hibrida.
 * **Kriptografi Kredensial:** Seluruh kata sandi diamanan menggunakan algoritma hashing satu arah BCRYPT (`password_hash`).
 * **Bot Mitigation:** Form login diperkuat dengan mekanisme *Session-Based Math CAPTCHA* dinamis untuk menangkal serangan otomatis (*automated brute-force attacks*).
 * **Manajemen Profil Mandiri:** Fasilitas bagi anggota untuk mengubah nama lengkap, validasi email anti-duplikasi, serta pengunggahan berkas gambar pasfoto dengan proteksi *server-side validation* (ekstensi JPG/PNG, batas ukuran file maks 2MB, dan *auto-cleanup* file residu lama di penyimpanan server).
 
-### 📖 2. Repositori Publikasi & Diskusi Relasional
+### 2. Repositori Publikasi & Diskusi Relasional
 * **Rak Artikel & Berita:** Katalog konten esai ilmiah, pengumuman, dan siaran kegiatan organisasi yang dilengkapi kueri pencarian kata kunci judul (*live search*) serta penyaringan kategori dinamis.
 * **Stateful Interaction System:** Sistem tombol *Like* interaktif yang status visualnya (*filled/outline state*) sinkron secara *real-time* dengan kondisi database pengguna terkait.
 * **Komentar Bersarang (Nested Comments):** Sistem umpan balik forum diskusi berundak yang memanfaatkan konsep relasi mandiri (*self-referencing relationship* via `parent_id`) pada basis data relasional untuk merekam alur dialektika secara runut.
 
-### 🏢 3. Struktur Organisasi & Modul Donasi
+### 3. Struktur Organisasi & Modul Donasi
 * **Bagan Pohon CSS Dinamis:** Visualisasi struktur kepengurusan hierarkis yang dibangun murni menggunakan manipulasi *CSS Pseudo-element* (`::before` dan `::after`), menghasilkan layout adaptif yang responsif tanpa ketergantungan aset gambar statis.
 * **Saluran Kontribusi Publik:** Integrasi Bootstrap 5 Modal Pop-up yang memuat fitur *auto-copy* nomor rekening bank instan via JavaScript Clipboard API serta penayangan QRIS dinamis untuk mempermudah transaksi donatur.
 
-### 🛠️ 4. Pusat Kendali Admin Panel (CMS Dashboard)
+### 4. Pusat Kendali Admin Panel (CMS Dashboard)
 * **Role-Based Access Control (RBAC):** Proteksi hak akses ketat berbasis peran level akun ('admin' dan 'user') yang memblokir celah kerentanan *Unauthenticated Privilege Escalation*.
 * **Real-time Aggregation Metrics:** Dasbor khusus menyajikan ringkasan statistik pertumbuhan jumlah data secara aktual menggunakan fungsi agregat SQL `COUNT`.
 * **Data Privacy Compliance:** Pelaporan data rekor seluruh anggota tanpa memaparkan string *hash password* demi mematuhi standar privasi keamanan informasi.
@@ -36,7 +31,7 @@ Antarmuka dikembangkan dengan mengadopsi prinsip ergonomi membaca (*Cozy Library
 
 ---
 
-## 💻 Spesifikasi Teknologi (Tech Stack)
+## Spesifikasi Teknologi (Tech Stack)
 
 * **Language:** PHP 7.4 / 8.x (Native Backend Engine)
 * **Database:** MySQL / MariaDB (Lapisan Konektivitas PDO Driver dengan *Prepared Statements*)
@@ -46,7 +41,7 @@ Antarmuka dikembangkan dengan mengadopsi prinsip ergonomi membaca (*Cozy Library
 
 ---
 
-## 💾 Panduan Instalasi Lokal (Local Deployment)
+## Panduan Instalasi Lokal (Local Deployment)
 
 Ikuti langkah-langkah berikut untuk menjalankan projek Pancaloka di lingkungan komputer lokal Anda:
 
